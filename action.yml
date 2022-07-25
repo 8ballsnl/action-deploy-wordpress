@@ -1,9 +1,9 @@
-name: 'Deploy WordPress'
-description: 'Deploy WordPress code to a server'
-author: 'rtCamp'
+name: "Deploy WordPress"
+description: "Deploy WordPress code to a server"
+author: "rtCamp"
 runs:
-  using: 'docker'
-  image: 'docker://ghcr.io/rtcamp/action-deploy-wordpress:v3.0.2'
+  using: "docker"
+  image: "docker://ghcr.io/8ballsnl/action-deploy-wordpress:master"
 branding:
-  icon: 'upload-cloud'
-  color: 'yellow'
+  icon: "upload-cloud"
+  color: "yellow"
