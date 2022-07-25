@@ -38,20 +38,11 @@ set( 'rsync', [
 	'exclude'       => [
 		'.git',
 		'.github',
-		'deploy.php',
 		'composer.lock',
 		'.env',
 		'.env.example',
 		'.gitignore',
 		'.gitlab-ci.yml',
-		'Gruntfile.js',
-		'package.json',
-		'README.md',
-		'gulpfile.js',
-		'.circleci',
-		'package-lock.json',
-		'package.json',
-		'phpcs.xml',
 	],
 	'exclude-file'  => true,
 	'include'       => [],
@@ -60,7 +51,7 @@ set( 'rsync', [
 	'filter-file'   => false,
 	'filter-perdir' => false,
 	'flags'         => 'rz', // Recursive, with compress
-	'options'       => [ 'delete', 'delete-excluded', 'links', 'no-perms', 'no-owner', 'no-group' ],
+	'options'       => [ 'links', 'no-perms', 'no-owner', 'no-group' ],
 	'timeout'       => 300,
 ] );
 
