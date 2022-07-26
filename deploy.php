@@ -14,7 +14,7 @@ if ( file_exists( 'vendor/deployer/recipes/recipe/rsync.php' ) ) {
 	require getenv( 'COMPOSER_HOME' ) . '/vendor/deployer/recipes/recipe/rsync.php';
 }
 
-set( 'shared_dirs', [ 'wp-content/uploads' ] );
+set( 'shared_dirs', [ 'wp-content/uploads', 'wp-content/plugins' ] );
 set( 'writable_dirs', [
 	'wp-content',
 	'wp-content/uploads',
@@ -38,11 +38,20 @@ set( 'rsync', [
 	'exclude'       => [
 		'.git',
 		'.github',
+		'deploy.php',
 		'composer.lock',
 		'.env',
 		'.env.example',
 		'.gitignore',
 		'.gitlab-ci.yml',
+		'Gruntfile.js',
+		'package.json',
+		'README.md',
+		'gulpfile.js',
+		'.circleci',
+		'package-lock.json',
+		'package.json',
+		'phpcs.xml',
 	],
 	'exclude-file'  => true,
 	'include'       => [],
@@ -51,7 +60,7 @@ set( 'rsync', [
 	'filter-file'   => false,
 	'filter-perdir' => false,
 	'flags'         => 'rz', // Recursive, with compress
-	'options'       => [ 'links', 'no-perms', 'no-owner', 'no-group' ],
+	'options'       => [ 'delete', 'delete-excluded', 'links', 'no-perms', 'no-owner', 'no-group' ],
 	'timeout'       => 300,
 ] );
 
