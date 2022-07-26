@@ -3,7 +3,7 @@ description: "Deploy WordPress code to a server"
 author: "rtCamp"
 runs:
   using: "docker"
-  image: "docker://ghcr.io/8ballsnl/action-deploy-wordpress:master"
+  image: "docker://ghcr.io/8ballsnl/action-deploy-wordpress:1.0"
 branding:
   icon: "upload-cloud"
   color: "yellow"
