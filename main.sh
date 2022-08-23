@@ -233,7 +233,7 @@ function setup_wordpress_files() {
 		fi
 	fi
 
-	wp core download --version="$WP_VERSION" --allow-root
+	wp core download --version="$WP_VERSION" --locale="nl_NL" --allow-root
 
 	rm -r wp-content/
 
